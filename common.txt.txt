@@ -1,0 +1,4 @@
+Pending Items:
+
+1) Class Diagrams
+2) AWS KMS implementation in java code
