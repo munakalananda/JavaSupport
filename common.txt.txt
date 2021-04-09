@@ -3,6 +3,6 @@ Pending Items:
 1) Class Diagrams
 2) AWS KMS implementation in java code
 
-Class Diagrams :  https://github.com/munakalananda/JavaSupport
+Class Diagrams :  https://www.google.com/amp/s/creately.com/blog/diagrams/sequence-diagram-tutorial/amp/
 
 AWS Key : we should provide permission on lambda with secrets 
