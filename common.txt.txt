@@ -23,3 +23,24 @@ public static String convertToNewFormat(String dateStr) throws ParseException {
 select extract(day from(sys_extract_utc(systimestamp) - to_timestamp('1970-01-01', 'YYYY-MM-DD'))) * 86400000 
             + to_number(to_char(sys_extract_utc(systimestamp), 'SSSSSFF3'))
         from dual;
+        
+        
+        
+        
+        SELECT 
+        SYSTIMESTAMP,
+        SYSTIMESTAMP AT TIME ZONE 'UTC',
+        TO_CHAR(SYSTIMESTAMP,'DD-MON-YYYY HH24:MI:SS.FF3 TZH:TZM'),
+        TO_CHAR(SYSTIMESTAMP,'YYYY-MM-DD HH24:MI:SS.FF3 TZH:TZM'),
+        TO_CHAR(SYSTIMESTAMP,'YYYYMMDDHH24MISSFF3') FROM DUAL;
+        
+        SELECT TO_NUMBER(TO_CHAR(SYSTIMESTAMP,'YYYYMMDDHH24MISSFF3')) FROM DUAL;
+        
+        SELECT (EXTRACT(DAY FROM (SYSTIMESTAMP - TIMESTAMP '1970-01-01 00:00:00 UTC') * 24 * 60) * 60 + EXTRACT(SECOND FROM
+        SYSTIMESTAMP )) *  1000000000 AS NANOS FROM DUAL;
+        
+        
+        
+        
+        
+        
