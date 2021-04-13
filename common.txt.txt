@@ -18,3 +18,8 @@ public static String convertToNewFormat(String dateStr) throws ParseException {
     Date convertedDate = sourceFormat.parse(dateStr);
     return destFormat.format(convertedDate);
 }
+
+
+select extract(day from(sys_extract_utc(systimestamp) - to_timestamp('1970-01-01', 'YYYY-MM-DD'))) * 86400000 
+            + to_number(to_char(sys_extract_utc(systimestamp), 'SSSSSFF3'))
+        from dual;
