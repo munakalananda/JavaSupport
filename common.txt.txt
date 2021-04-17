@@ -34,6 +34,12 @@ select extract(day from(sys_extract_utc(systimestamp) - to_timestamp('1970-01-01
         TO_CHAR(SYSTIMESTAMP,'YYYY-MM-DD HH24:MI:SS.FF3 TZH:TZM'),
         TO_CHAR(SYSTIMESTAMP,'YYYYMMDDHH24MISSFF3') FROM DUAL;
         
+        
+        
+        DropWizard-jdbi
+        https://github.com/dropwizard/dropwizard-jdbi
+        https://github.com/stevenalexander/dropwizard-jdbi
+        
         SELECT TO_NUMBER(TO_CHAR(SYSTIMESTAMP,'YYYYMMDDHH24MISSFF3')) FROM DUAL;
         
         SELECT (EXTRACT(DAY FROM (SYSTIMESTAMP - TIMESTAMP '1970-01-01 00:00:00') * 24 * 60) * 60 + EXTRACT(SECOND FROM
